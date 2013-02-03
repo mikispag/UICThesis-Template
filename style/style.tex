@@ -18,3 +18,5 @@
 \renewcommand{\bibsection}{\section*{}}
 % Single spacing list of abbreviations
 \renewcommand*{\glsgroupskip}{}
+% Hyperref fix
+\def\texorpdf #1#2{\texorpdfstring{#1{#2}}{#2}}

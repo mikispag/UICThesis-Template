@@ -777,7 +777,7 @@
    \else
 \addtocontents{toc}{\protect\addvspace{\baselineskip}}
 \addcontentsline{toc}{chapter}%
-{\protect\xnumberline{\thechapter\hskip 2em}\uppercase{#1}}
+{\protect\xnumberline{\thechapter}\texorpdf\uppercase{#1}}
    \fi
    \if@startedbodyyet         % Then do nothing
    \else
