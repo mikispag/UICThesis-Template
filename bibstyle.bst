@@ -241,7 +241,10 @@ FUNCTION {field.or.null}
 }
  
 FUNCTION {emphasize}
-{ 
+{ duplicate$ empty$
+    { pop$ "" }
+    { "{\underl " swap$ * " & }" * }
+  if$
 }
  
 INTEGERS { nameptr namesleft numnames }
