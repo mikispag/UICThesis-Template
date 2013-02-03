@@ -1,0 +1,20 @@
+% !TEX root =  ../thesis.tex
+
+\def\chapterautorefname{Chapter}
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Section}
+\def\subsubsectionautorefname{Section}
+\def\figureautorefname{Figure}
+\def\tableautorefname{Table}
+
+% Double spacing for text
+\linespread{2}
+% No square brackets in bibliography
+\makeatletter
+\renewcommand\@biblabel[1]{#1.}
+\makeatother
+% Bibliography style
+\renewcommand\bibname{}
+\renewcommand{\bibsection}{\section*{}}
+% Single spacing list of abbreviations
+\renewcommand*{\glsgroupskip}{}

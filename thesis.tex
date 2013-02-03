@@ -1,0 +1,99 @@
+% UIC Thesis Template by
+% Michele Spagnuolo - http://michele.spagnuolo.me
+% Feb 2013
+
+\documentclass[letterpaper,11pt,oneside,final]{uicthesis}
+\usepackage{amsfonts, amsmath, amsthm, amssymb, epsfig, graphicx, float}
+\usepackage[longnamesfirst,square,sort&compress, comma, super]{natbib}
+\usepackage[xindy,style=index]{glossaries}
+
+% Configuration
+	% Thesis title
+	\newcommand{\thesisTitle}{Thesis Title}
+	% Thesis author
+	\newcommand{\thesisAuthor}{Michele Spagnuolo}
+	% Author's previous degrees
+	\newcommand{\authorDegrees}{B.S., Politecnico di Milano, July 2011}
+	% Current degree (Thesis's degree)
+	\newcommand{\thesisDegree}{Master of Science in Computer Science}
+
+\usepackage[unicode,
+			pdftex,
+			plainpages=false,
+			linktoc=all,
+			hyperindex,
+			breaklinks=true,
+			citecolor=green,
+			urlcolor=blue
+		   ]{hyperref}
+\hypersetup{
+	pdftitle={\thesisTitle},
+	pdfauthor={\thesisAuthor}
+}
+
+% Style
+\input{style/style}
+
+% Acronyms (to appear in the List of Abbreviations)
+\makeglossaries
+\input{acronyms/acronyms}
+
+\begin{document}
+	\title{\huge{\thesisTitle}}
+	\author{\thesisAuthor}
+	\pdegrees{\authorDegrees}
+	\degree{\thesisDegree}
+	\maketitle
+
+	\dedication
+		\input{dedication/dedication}
+
+	\acknowledgements
+		\input{acknowledgements/acknowledgements}
+
+	% Optional Preface
+	% \preface \label{preface}
+	%	Blah
+	
+	\tableofcontents
+	\listoftables
+	\listoffigures
+	%\listofabbreviations
+	% Remember to run makeglossaries thesis
+		\glsaddall
+		\printglossary[title=LIST OF ABBREVIATIONS]
+
+	\summary \label{summary}
+		Summary\ldots
+
+	\chapter{Introduction} \label{chap:intro}
+		\input{chapters/intro}
+	\chapter{State of the Art} \label{chap:SOA}
+		\input{chapters/soa}
+	\chapter{Proposed Approach} \label{chap:approach}
+		\input{chapters/approach}
+	\chapter{Proposed Implementation} \label{chap:implem}
+		\input{chapters/implementation}
+	\chapter{Experimental Results} \label{chap:results}
+		\input{chapters/results}
+	\chapter{Conclusions} \label{chap:conclusion}
+		\input{chapters/conclusion}
+
+	\clearpage
+	\phantomsection
+	\appendices
+		\appendix \label{app:a}
+		\input{appendices/appa}
+
+	\clearpage
+	\phantomsection
+	\bib
+	\bibliography{thesis}
+	\nocite{*}
+
+	\newpage
+	\phantomsection
+
+	\input{vita/vita}
+		\ldots
+\end{document}
